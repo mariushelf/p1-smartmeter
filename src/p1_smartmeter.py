@@ -176,9 +176,6 @@ def parse_value(value):
 
 
 def recon():
-    if reconnect_counter > 5:
-        sys.exit(1)
-
     try:
         mqttc.reconnect()
         info_msg("Successful reconnected to the MQTT server")
